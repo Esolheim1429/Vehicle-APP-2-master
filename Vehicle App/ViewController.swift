@@ -37,6 +37,10 @@ class ViewController: UIViewController, GIDSignInUIDelegate{
         //hideGoogleSignIn()
     }
     
+    func retryLogin(){
+        GIDSignIn.sharedInstance()?.signIn()
+    }
+    
     @objc func timerAction() {
         counter += 1
     }
@@ -77,6 +81,17 @@ class ViewController: UIViewController, GIDSignInUIDelegate{
 //        nvc?.cars = cars
 //        nvc?.vans = vans
 //    }
+    
+    @objc func notSignedInAlert(){
+        let alertController = UIAlertController(title: "Sign in first", message: nil, preferredStyle: .alert)
+        let cancelAlert = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let okAlert = UIAlertAction(title: "Retry", style: .default, handler:  { (action) in
+            self.retryLogin()
+        })
+        alertController.addAction(okAlert)
+        alertController.addAction(cancelAlert)
+        present(alertController, animated: true, completion: nil)
+    }
 
 }
 
