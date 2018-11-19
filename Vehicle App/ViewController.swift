@@ -24,10 +24,6 @@ class ViewController: UIViewController, GIDSignInUIDelegate{
         signedIn = appDelegate.signedIn
         print("test")
         print("test2")
-        timer = Timer.scheduledTimer(timeInterval: 1.5, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5), execute: {
-            print(self.counter)
-        })
         timer = Timer.scheduledTimer(timeInterval: 1.5, target: self, selector: #selector(hideGoogleSignIn), userInfo: nil, repeats: true)
 
 
