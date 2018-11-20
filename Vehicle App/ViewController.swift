@@ -67,6 +67,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate{
     @IBAction func carChosen(_ sender: UIButton) {
         cars = true
         vans = false
+        //oof
         //performSegue(withIdentifier: "calendarSegue", sender: nil)
     }
 
