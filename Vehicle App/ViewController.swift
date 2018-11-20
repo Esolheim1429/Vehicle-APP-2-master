@@ -68,6 +68,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate{
         cars = true
         vans = false
         //oof
+        //wtf
         //performSegue(withIdentifier: "calendarSegue", sender: nil)
     }
 
